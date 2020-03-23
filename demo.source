@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ITProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "Моля, запишете вашия API Ключ";
+            string apikey = "123";
+            string error = "Грешен API Ключ";
+            Console.Write("Your Username: ");
+            var username = Console.ReadLine();
+            Console.Write("Please Enter YOUR Api Key: ");
+            var readkey = Console.ReadLine();
+            if (readkey != apikey)
+            {
+                Console.WriteLine(error);
+            }
+            else
+            {
+                Console.Clear();
+                Console.Title = "Project 2 // Spam Bot";
+                Console.WriteLine("Добре дошъл, " + username);
+                Console.WriteLine("Моля изчакай ...");
+                string Bot = "TES";
+                System.Threading.Thread.Sleep(4000);
+                Console.Clear();
+                Console.Write("Invite Code: ");
+                var invitecode = Console.ReadLine();
+                Console.Write("Text To Spam: ");
+                var textspam = Console.ReadLine();
+                Console.Write("How much messages to send: ");
+                var textcount = double.Parse(Console.ReadLine());
+                Console.WriteLine("Proxy Type: ");
+                Console.WriteLine("1) Socks4");
+                Console.WriteLine("2) Socks5");
+                Console.WriteLine("3) HTTP/S");
+                Console.WriteLine("3) NONE ");
+                var proxytype = Console.ReadLine();
+                Console.WriteLine("Please Wait ... ");
+                System.Threading.Thread.Sleep(2000);
+                if (proxytype == "1")
+                {
+                    Console.Write("INVITE CODE : " + invitecode + "     |     " + "PROXY TYPE: " + "         |        " + " SOCKS4 "); /// SOCKS4
+                    System.Threading.Thread.Sleep(5000);
+                    for (int i = 1; i <= textcount; i++)
+                    Console.WriteLine("Sending Bot #" + i);
+                }
+                if (proxytype == "2")
+                {
+                    Console.Write("INVITE CODE : " + invitecode + "     |     " + "PROXY TYPE: " + "         |        " + " SOCKS5 "); // SOCKS5
+                    System.Threading.Thread.Sleep(5000);
+                    for (int i = 1; i <= textcount; i++)
+                        Console.WriteLine("Sending Bot #" + i);
+                }
+                if (proxytype == "3")
+                {
+                    Console.Write("INVITE CODE : " + invitecode + "     |     " + "PROXY TYPE: " + "         |        " + " HTTP/S "); // HTTP/S
+                    System.Threading.Thread.Sleep(5000);
+                    for (int i = 1; i <= textcount; i++)
+                        Console.WriteLine("Sending Bot #" + i);
+                }
+                if (proxytype == "4")
+                {
+                    Console.Write("INVITE CODE : " + invitecode + "     |     " + "PROXY TYPE: " + "         |        " + " NO PROXY "); // NO PROXY
+                    System.Threading.Thread.Sleep(5000);
+                    for (int i = 1; i <= textcount; i++)
+                        Console.WriteLine("Sending Bot #" + i);
+                }
+            }
+        }
+    }
+}
